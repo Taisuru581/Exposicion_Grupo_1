@@ -1,18 +1,201 @@
 <!doctype html>
 <html lang="es">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grid y utilidades · Laboratorio Bootstrap</title><link rel="stylesheet" href="assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="assets/css/laboratorio-bootstrap.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuadrícula y utilidades de Bootstrap</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+</head>
 <body>
-<main class="lab">
-  <section aria-labelledby="gridTitulo"><div class="lab-title"><div><span class="lab-kicker">2.4 / Layout y Grid</span><h2 id="gridTitulo">Doce columnas, varias posibilidades.</h2></div><span class="lab-width" id="labAncho">Ancho del laboratorio</span></div>
-    <p>El container guarda el contenido, la row organiza la fila y las columnas indican cuánto espacio ocupa cada bloque. Probá distintas combinaciones.</p>
-    <div class="lab-controls"><label for="tipoContainer">Contenedor <select id="tipoContainer"><option value="container">container</option><option value="container-fluid">container-fluid</option></select></label><label for="combinacion">Columnas desde lg <select id="combinacion"><option value="4,4,4">4 + 4 + 4</option><option value="6,6">6 + 6</option><option value="8,4">8 + 4</option><option value="3,3,3,3">3 + 3 + 3 + 3</option><option value="12">12</option></select></label></div>
-    <div class="grid-area"><div id="gridContainer" class="container"><div class="row g-3" id="gridRow"></div></div></div>
-    <p class="lab-note">En móvil, cada bloque ocupa 12. Desde md, ocupa 6. Desde lg (992 px), aplica la combinación elegida. Las clases corresponden a Bootstrap 5.3.8.</p>
-    <details><summary>Ver el HTML que genera esta combinación</summary><pre><code id="gridCode"></code></pre></details>
-  </section>
-  <section class="utility-section" aria-labelledby="utilityTitulo"><span class="lab-kicker">2.5 / Clases utilitarias</span><h2 id="utilityTitulo">Una clase cambia una propiedad.</h2><p>Activá y desactivá las clases para ver lo que aporta cada una. Hay 24 ejemplos; las clases de display y alineación de texto se reemplazan entre sí para que el resultado sea claro.</p>
-    <div class="utility-layout"><div class="utility-options" id="utilityOptions"></div><div class="utility-result"><div class="sample-area"><div id="utilityExample"><span class="sample-chip">Playa</span><span class="sample-chip">Bosque</span><span class="sample-chip">Montaña</span></div><p id="hiddenMessage" hidden>El elemento está oculto porque activamos <code>d-none</code>.</p></div><p class="lab-note">Los tres elementos permiten observar el espacio, el orden y la alineación.</p><pre><code id="utilityCode"></code></pre><button class="btn btn-outline-success" type="button" id="resetUtility">Restablecer el ejemplo</button></div></div>
-  </section>
+<main class="container py-4">
+  <a href="index.html#layout">Volver a la explicación</a>
+  <h1 class="my-4">Cuadrícula y utilidades</h1>
+  <p>Para practicar, cambiá las clases en este archivo, guardá y observá el resultado con Live Server.</p>
+  <h2>Una fila de doce columnas</h2>
+  <!-- Cambiar col-lg-4 por col-lg-6 en los tres bloques. -->
+  <div class="row g-3 mb-4">
+    <div class="col-12 col-md-6 col-lg-4"><div class="bg-light border p-3">Bloque 1</div></div>
+    <div class="col-12 col-md-6 col-lg-4"><div class="bg-light border p-3">Bloque 2</div></div>
+    <div class="col-12 col-md-6 col-lg-4"><div class="bg-light border p-3">Bloque 3</div></div>
+  </div>
+  <p>Una columna en móvil, dos desde 768 px y tres desde 992 px.</p>
 </main>
-<script defer src="assets/js/laboratorio-bootstrap.js"></script>
-</body></html>
+<!-- Dos contenedores al mismo nivel para comparar sus anchos. -->
+<div class="container border p-3 mb-3">container: limita el ancho en pantallas grandes.</div>
+<div class="container-fluid bg-light border p-3 mb-3">container-fluid: ocupa el ancho disponible.</div>
+<section class="container py-4" aria-labelledby="tituloUtilidades">
+  <h2 id="tituloUtilidades">24 utilidades con ejemplos</h2>
+  <p>Elegí al menos 15 para explicar. Cada ejemplo muestra la clase aplicada y su HTML.</p>
+  <div class="row g-3">
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">p-3</h3><p>Espacio interior en los cuatro lados.</p>
+        <div class="p-3 border">Texto con espacio interior</div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;p-3 border&quot;&gt;Texto con espacio interior&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">px-4</h3><p>Espacio interior a izquierda y derecha.</p>
+        <div class="px-4 border">Texto separado de los lados</div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;px-4 border&quot;&gt;Texto separado de los lados&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">py-2</h3><p>Espacio interior arriba y abajo.</p>
+        <div class="py-2 border">Texto separado arriba y abajo</div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;py-2 border&quot;&gt;Texto separado arriba y abajo&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">m-0</h3><p>Quita los márgenes.</p>
+        <p class="m-0">Párrafo sin margen</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;m-0&quot;&gt;Párrafo sin margen&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">mb-3</h3><p>Espacio debajo.</p>
+        <p class="mb-3">Primer párrafo</p><p>Segundo párrafo</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;mb-3&quot;&gt;Primer párrafo&lt;/p&gt;&lt;p&gt;Segundo párrafo&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">mt-4</h3><p>Espacio encima.</p>
+        <p class="mt-4">Párrafo separado arriba</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;mt-4&quot;&gt;Párrafo separado arriba&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">gap-3</h3><p>Espacio entre elementos flex.</p>
+        <div class="d-flex gap-3"><span>Playa</span><span>Bosque</span></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;d-flex gap-3&quot;&gt;&lt;span&gt;Playa&lt;/span&gt;&lt;span&gt;Bosque&lt;/span&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">d-flex</h3><p>Coloca los elementos con Flexbox.</p>
+        <div class="d-flex"><span>Playa</span><span>Bosque</span></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;d-flex&quot;&gt;&lt;span&gt;Playa&lt;/span&gt;&lt;span&gt;Bosque&lt;/span&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">d-block</h3><p>Muestra cada elemento en una línea.</p>
+        <span class="d-block">Playa</span><span class="d-block">Bosque</span>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;span class=&quot;d-block&quot;&gt;Playa&lt;/span&gt;&lt;span class=&quot;d-block&quot;&gt;Bosque&lt;/span&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">d-none</h3><p>Oculta un elemento.</p>
+        <p class="d-none">Este texto está oculto</p><p>El primer párrafo no se ve. Quitá d-none en el archivo.</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;d-none&quot;&gt;Este texto está oculto&lt;/p&gt;&lt;p&gt;El primer párrafo no se ve. Quitá d-none en el archivo.&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">flex-column</h3><p>Coloca los elementos en columna.</p>
+        <div class="d-flex flex-column"><span>Playa</span><span>Bosque</span></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;d-flex flex-column&quot;&gt;&lt;span&gt;Playa&lt;/span&gt;&lt;span&gt;Bosque&lt;/span&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">flex-wrap</h3><p>Permite pasar a otra línea.</p>
+        <div class="d-flex flex-wrap gap-3"><span>Un paseo por la playa</span><span>Una caminata por el bosque</span></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;d-flex flex-wrap gap-3&quot;&gt;&lt;span&gt;Un paseo por la playa&lt;/span&gt;&lt;span&gt;Una caminata por el bosque&lt;/span&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">justify-content-between</h3><p>Separa los elementos hacia los extremos.</p>
+        <div class="d-flex justify-content-between"><span>Playa</span><span>Bosque</span></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;d-flex justify-content-between&quot;&gt;&lt;span&gt;Playa&lt;/span&gt;&lt;span&gt;Bosque&lt;/span&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">align-items-center</h3><p>Alinea los elementos al centro en altura.</p>
+        <div class="d-flex align-items-center gap-3"><span class="p-3 border">Playa</span><span>Bosque</span></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;&lt;span class=&quot;p-3 border&quot;&gt;Playa&lt;/span&gt;&lt;span&gt;Bosque&lt;/span&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">text-center</h3><p>Centra el texto.</p>
+        <p class="text-center">Texto centrado</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;text-center&quot;&gt;Texto centrado&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">text-end</h3><p>Alinea el texto a la derecha.</p>
+        <p class="text-end">Texto a la derecha</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;text-end&quot;&gt;Texto a la derecha&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">fw-bold</h3><p>Texto en negrita.</p>
+        <p class="fw-bold">Texto destacado</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;fw-bold&quot;&gt;Texto destacado&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">bg-success</h3><p>Fondo verde.</p>
+        <p class="bg-success text-white p-3">Fondo verde</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;bg-success text-white p-3&quot;&gt;Fondo verde&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">text-white</h3><p>Letras blancas.</p>
+        <p class="text-white bg-dark p-3">Letras blancas</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;text-white bg-dark p-3&quot;&gt;Letras blancas&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">border</h3><p>Agrega un borde.</p>
+        <p class="border p-3">Texto con borde</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;border p-3&quot;&gt;Texto con borde&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">rounded-3</h3><p>Redondea las esquinas.</p>
+        <p class="rounded-3 border p-3">Esquinas redondeadas</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;rounded-3 border p-3&quot;&gt;Esquinas redondeadas&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">shadow-sm</h3><p>Sombra pequeña.</p>
+        <p class="shadow-sm p-3">Texto con sombra</p>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;p class=&quot;shadow-sm p-3&quot;&gt;Texto con sombra&lt;/p&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">w-100</h3><p>Ocupa el ancho del contenedor.</p>
+        <span class="d-block w-100 border p-3">Todo el ancho</span>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;span class=&quot;d-block w-100 border p-3&quot;&gt;Todo el ancho&lt;/span&gt;</code></pre></details>
+      </div>
+    </article>
+    <article class="col-12 col-lg-6">
+      <div class="border rounded p-3 h-100">
+        <h3 class="h5">h-100</h3><p>Ocupa la altura del contenedor.</p>
+        <div style="height: 100px"><div class="h-100 border p-3">Toda la altura</div></div>
+        <details class="mt-3"><summary>Ver HTML</summary><pre class="bg-light p-2"><code>&lt;div style=&quot;height: 100px&quot;&gt;&lt;div class=&quot;h-100 border p-3&quot;&gt;Toda la altura&lt;/div&gt;&lt;/div&gt;</code></pre></details>
+      </div>
+    </article>
+  </div>
+</section>
+</body>
+</html>
