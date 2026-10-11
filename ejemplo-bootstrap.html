@@ -25,7 +25,7 @@
 <main id="contenido">
   <!-- Portada en dos columnas -->
   <section class="container ruta-portada"><div class="row g-4 align-items-center">
-    <div class="col-12 col-md-6"><span class="ruta-kicker">Un espacio para desconectarse</span><h1 class="mt-3 mb-3">Un paseo cambia el día.</h1><p>Una playa, un sendero o una montaña. Elegí el ambiente que más te guste y prepará un paseo a tu ritmo.</p><a href="#destinos" class="btn btn-success">Explorar los destinos ↗</a></div>
+    <div class="col-12 col-md-6"><span class="ruta-kicker">Un espacio para desconectarse</span><h1 class="mt-3 mb-3">Un paseo cambia el día.</h1><p>Una playa, un sendero o una montaña. Elige el ambiente que más te guste y prepara un paseo a tu ritmo.</p><a href="#destinos" class="btn btn-success">Explorar los destinos ↗</a></div>
     <div class="col-12 col-md-6">
       <!-- Carrusel de imagenes -->
       <div id="paisajes" class="carousel slide ruta-carousel" aria-label="Galería de paisajes">
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div></section>
-  <section class="container ruta-seccion" id="destinos"><span class="ruta-kicker">Elegí el ambiente</span><h2 class="mt-3">¿Qué te gustaría hacer?</h2>
+  <section class="container ruta-seccion" id="destinos"><span class="ruta-kicker">Elige el ambiente</span><h2 class="mt-3">¿Qué te gustaría hacer?</h2>
     <!-- Menu de destinos -->
     <div class="dropdown my-3">
       <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ir a un ambiente</button>
@@ -90,21 +90,21 @@
       <button class="nav-link active" id="tabEquipo" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#panelEquipo" aria-controls="panelEquipo" aria-selected="true">Qué llevar</button>
       <button class="nav-link" id="tabPlan" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#panelPlan" aria-controls="panelPlan" aria-selected="false">Cómo organizarse</button>
       <button class="nav-link" id="tabCuido" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#panelCuido" aria-controls="panelCuido" aria-selected="false">Cuidar el lugar</button>
-    </div><div class="tab-content"><div class="tab-pane active show" id="panelEquipo" role="tabpanel" aria-labelledby="tabEquipo" tabindex="0"><h3 class="h5">Llevar lo necesario</h3><p class="mb-0">Agua, protección solar, calzado cómodo y una bolsa para los residuos. Si hay posibilidad de lluvia, conviene llevar una capa liviana.</p></div><div class="tab-pane" id="panelPlan" role="tabpanel" aria-labelledby="tabPlan" tabindex="0"><h3 class="h5">Dejar espacio para disfrutar</h3><p class="mb-0">Revisá la ruta y el clima, definí una hora de salida y evitá llenar el día de actividades. La idea es que el paseo también permita descansar.</p></div><div class="tab-pane" id="panelCuido" role="tabpanel" aria-labelledby="tabCuido" tabindex="0"><h3 class="h5">Dejar el lugar como lo encontramos</h3><p class="mb-0">Respetá los senderos, recogé tus residuos y observá los animales sin molestarlos. Son detalles pequeños que ayudan bastante.</p></div></div></div>
+    </div><div class="tab-content"><div class="tab-pane active show" id="panelEquipo" role="tabpanel" aria-labelledby="tabEquipo" tabindex="0"><h3 class="h5">Llevar lo necesario</h3><p class="mb-0">Agua, protección solar, calzado cómodo y una bolsa para los residuos. Si hay posibilidad de lluvia, conviene llevar una capa liviana.</p></div><div class="tab-pane" id="panelPlan" role="tabpanel" aria-labelledby="tabPlan" tabindex="0"><h3 class="h5">Dejar espacio para disfrutar</h3><p class="mb-0">Revisa la ruta y el clima, define una hora de salida y evita llenar el día de actividades. La idea es que el paseo también permita descansar.</p></div><div class="tab-pane" id="panelCuido" role="tabpanel" aria-labelledby="tabCuido" tabindex="0"><h3 class="h5">Dejar el lugar como lo encontramos</h3><p class="mb-0">Respeta los senderos, recoge tus residuos y observa los animales sin molestarlos. Son detalles pequeños que ayudan bastante.</p></div></div></div>
   </section>
-  <section class="container ruta-seccion" id="solicitud"><div class="row g-4"><div class="col-12 col-lg-4"><span class="ruta-kicker">Planeá tu paseo</span><h2 class="mt-3">Empecemos por lo básico.</h2></div><div class="col-12 col-lg-8">
+  <section class="container ruta-seccion" id="solicitud"><div class="row g-4"><div class="col-12 col-lg-4"><span class="ruta-kicker">Planea tu paseo</span><h2 class="mt-3">Empecemos por lo básico.</h2></div><div class="col-12 col-lg-8">
     <!-- Formulario -->
     <form class="ruta-form" id="formPaseo" action="practica-completada.html" method="get">
       <div class="row g-4">
-        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="nombre">Nombre <span aria-hidden="true">*</span></label><input class="form-control" id="nombre" type="text" autocomplete="name" minlength="2" maxlength="80" required aria-describedby="errorNombre"><div class="form-text" id="errorNombre">Escribí tu nombre, con al menos dos caracteres.</div></div></div>
-        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="correo">Correo electrónico <span aria-hidden="true">*</span></label><input class="form-control" id="correo" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" maxlength="120" required aria-describedby="errorCorreo"><div class="form-text" id="errorCorreo">Revisá el correo; por ejemplo, nombre@ejemplo.com.</div></div></div>
-        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="destino">Ambiente <span aria-hidden="true">*</span></label><select class="form-select" id="destino" required aria-describedby="errorDestino"><option value="">Elegí una opción</option><option value="playa">Playa</option><option value="bosque">Bosque</option><option value="montana">Montaña</option></select><div class="form-text" id="errorDestino">Elegí el ambiente que te gustaría visitar.</div></div></div>
-        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="fecha">Fecha estimada <span aria-hidden="true">*</span></label><input class="form-control" id="fecha" type="date" required aria-describedby="errorFecha"><div class="form-text" id="errorFecha">Elegí una fecha para el paseo.</div></div></div>
+        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="nombre">Nombre <span aria-hidden="true">*</span></label><input class="form-control" id="nombre" type="text" autocomplete="name" minlength="2" maxlength="80" required aria-describedby="errorNombre"><div class="form-text" id="errorNombre">Escribe tu nombre, con al menos dos caracteres.</div></div></div>
+        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="correo">Correo electrónico <span aria-hidden="true">*</span></label><input class="form-control" id="correo" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" maxlength="120" required aria-describedby="errorCorreo"><div class="form-text" id="errorCorreo">Revisa el correo; por ejemplo, nombre@ejemplo.com.</div></div></div>
+        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="destino">Ambiente <span aria-hidden="true">*</span></label><select class="form-select" id="destino" required aria-describedby="errorDestino"><option value="">Elige una opción</option><option value="playa">Playa</option><option value="bosque">Bosque</option><option value="montana">Montaña</option></select><div class="form-text" id="errorDestino">Elige el ambiente que te gustaría visitar.</div></div></div>
+        <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="fecha">Fecha estimada <span aria-hidden="true">*</span></label><input class="form-control" id="fecha" type="date" required aria-describedby="errorFecha"><div class="form-text" id="errorFecha">Elige una fecha para el paseo.</div></div></div>
       </div>
       <div class="ruta-field"><label class="form-label" for="personas">Cantidad de personas (de 1 a 8)</label><input class="form-range" id="personas" type="range" min="1" max="8" value="2"></div>
       <fieldset><legend>Horario preferido</legend><div class="inline-choice"><div class="form-check form-check-inline"><input class="form-check-input" id="horarioManana" type="radio" name="horario" value="mañana" checked><label class="form-check-label" for="horarioManana">Mañana</label></div><div class="form-check form-check-inline"><input class="form-check-input" id="horarioTarde" type="radio" name="horario" value="tarde"><label class="form-check-label" for="horarioTarde">Tarde</label></div></div></fieldset>
       <div class="ruta-field"><label class="form-label" for="comentarios">Comentarios <span class="ruta-ayuda">(opcional)</span></label><textarea class="form-control" id="comentarios" rows="3" maxlength="500" placeholder="Por ejemplo, si preferís una caminata corta."></textarea></div>
-      <div class="ruta-field form-check"><input class="form-check-input" type="checkbox" id="confirmacion" required aria-describedby="errorConfirmacion"><label class="form-check-label" for="confirmacion">Entiendo que esta solicitud es una demostración. *</label><div class="form-text" id="errorConfirmacion">Confirmá que entendés que se trata de una demo.</div></div>
+      <div class="ruta-field form-check"><input class="form-check-input" type="checkbox" id="confirmacion" required aria-describedby="errorConfirmacion"><label class="form-check-label" for="confirmacion">Entiendo que esta solicitud es una demostración. *</label><div class="form-text" id="errorConfirmacion">Confirma que entiendes que se trata de una demo.</div></div>
       <p class="ruta-ayuda">* Campos obligatorios.</p><button class="btn btn-success" type="submit">Comprobar formulario</button>
     </form>
   </div></div></section>
@@ -134,7 +134,7 @@
   </div></div>
 </div>
 <footer class="container ruta-pie">Ruta Tica · Sitio ilustrativo para ISW-512.</footer>
-<noscript><p class="container">Activá JavaScript para utilizar los componentes y el formulario de este ejemplo.</p></noscript>
+<noscript><p class="container">Activa JavaScript para utilizar los componentes y el formulario de este ejemplo.</p></noscript>
 <!-- JavaScript de Bootstrap -->
 <script src="assets/vendor/bootstrap.bundle.min.js"></script>
 </body>
