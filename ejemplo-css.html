@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Sin viewport, un celular puede interpretar la página como una web ancha. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ejemplo completo de diseño responsivo construido con HTML y CSS propios.">
+  <title>Ruta Tica · Ejemplo con HTML y CSS</title>
+  <!-- Esta página no carga Bootstrap, otras librerías ni JavaScript. -->
+  <link rel="stylesheet" href="assets/css/ejemplo-css.css">
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<div class="barra-demo"><a href="index.html#laboratorio">← Volver al laboratorio</a><span>DEMO 01 · HTML + CSS <span class="indicador vista-movil">· 1 columna</span><span class="indicador vista-tablet">· 2 columnas</span><span class="indicador vista-desktop">· 3 columnas</span></span></div>
+<header class="cabecera contenedor">
+  <nav class="navegacion" aria-label="Navegación principal">
+    <a class="marca" href="#contenido">ruta<span>tica</span> ↗</a>
+    <div class="enlaces"><a href="#destinos">Destinos</a><a href="#consejos">Antes de salir</a><a href="#contacto">Consultas</a></div>
+  </nav>
+</header>
+<main id="contenido">
+  <section class="portada contenedor" aria-labelledby="titulo">
+    <div><span class="etiqueta">Un espacio para desconectarse</span><h1 id="titulo">Un paseo cambia el día.</h1><p>A veces no hace falta ir tan lejos. Una playa, un sendero o una montaña pueden ser suficientes para salir de la rutina y pasar un buen rato.</p><a class="boton" href="#destinos">Encontrar mi próximo paseo ↗</a></div>
+    <div class="foto-portada">
+      <!-- picture demuestra dirección de arte: en móvil se prioriza el bosque. -->
+      <!-- srcset ofrece archivos reales de distintos tamaños; sizes describe el espacio. -->
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/img/bosque-400.jpg 400w, assets/img/bosque-800.jpg 800w" sizes="92vw">
+        <img src="assets/img/playa-1400.jpg" srcset="assets/img/playa-400.jpg 400w, assets/img/playa-800.jpg 800w, assets/img/playa-1400.jpg 1400w" sizes="(min-width: 1200px) 540px, (min-width: 768px) 44vw, 92vw" width="1400" height="933" alt="Paisaje natural de muestra: un bosque en móvil o una costa en pantalla amplia" fetchpriority="high">
+      </picture>
+      <div class="nota-foto"><strong>Cada pantalla tiene su espacio.</strong><span>En móvil, la fotografía principal cambia a un bosque.</span></div>
+    </div>
+  </section>
+  <section class="seccion contenedor" id="destinos">
+    <div class="introduccion"><div><span class="etiqueta">Elegí el ambiente</span><h2>Tres maneras de salir de la rutina.</h2></div><p>Estos destinos son ilustrativos. Lo importante es elegir un lugar que se ajuste al tiempo que tenemos y a lo que nos gustaría hacer.</p></div>
+    <!-- El CSS usa span 12, span 6 y span 4 según el ancho disponible. -->
+    <div class="destinos">
+      <article class="destino"><img src="assets/img/playa-800.jpg" srcset="assets/img/playa-400.jpg 400w, assets/img/playa-800.jpg 800w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 44vw, 92vw" width="800" height="533" loading="lazy" alt="Olas y paisaje costero"><div class="destino-contenido"><span class="etiqueta">01 / Costa</span><h3>Un día de playa</h3><p>Caminar por la orilla, escuchar las olas y aprovechar la tarde sin andar con tanta prisa.</p><a href="#contacto">Consultar por este paseo ↗</a></div></article>
+      <article class="destino"><img src="assets/img/bosque-800.jpg" srcset="assets/img/bosque-400.jpg 400w, assets/img/bosque-800.jpg 800w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 44vw, 92vw" width="800" height="533" loading="lazy" alt="Árboles altos en un bosque"><div class="destino-contenido"><span class="etiqueta">02 / Naturaleza</span><h3>Una caminata en el bosque</h3><p>Una opción para caminar con calma, disfrutar el aire fresco y observar lo que normalmente pasamos por alto.</p><a href="#contacto">Consultar por este paseo ↗</a></div></article>
+      <article class="destino"><img src="assets/img/montana-800.jpg" srcset="assets/img/montana-400.jpg 400w, assets/img/montana-800.jpg 800w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 44vw, 92vw" width="800" height="533" loading="lazy" alt="Montaña con cumbres y vegetación"><div class="destino-contenido"><span class="etiqueta">03 / Altura</span><h3>Una vista desde la montaña</h3><p>Para quienes disfrutan los paisajes abiertos y prefieren un paseo con un poco más de movimiento.</p><a href="#contacto">Consultar por este paseo ↗</a></div></article>
+    </div>
+  </section>
+  <section class="seccion contenedor" id="consejos"><span class="etiqueta">Antes de salir</span><h2>Prepararse también es parte del paseo.</h2><div class="consejos"><div class="consejo"><h3>Revisar el clima</h3><p>La ropa y el equipo cambian bastante según el lugar y las condiciones del día.</p></div><div class="consejo"><h3>Llevar lo necesario</h3><p>Agua, protección solar y calzado cómodo hacen la diferencia, incluso en un recorrido corto.</p></div><div class="consejo"><h3>Cuidar el lugar</h3><p>Recoger los residuos y respetar los senderos ayuda a que otras personas también puedan disfrutarlo.</p></div></div></section>
+  <section class="seccion contenedor" id="contacto"><div class="contacto"><span class="etiqueta">Preguntas habituales</span><h2>Un par de cosas antes de decidir.</h2><details><summary>¿Estos paseos se pueden reservar?</summary><p>Esta es una página de muestra para la exposición. Las tarjetas y fotografías sirven para demostrar cómo se adapta un sitio completo.</p></details><details><summary>¿Cómo se organiza la página?</summary><p>La portada, los destinos, los consejos y las consultas comparten el mismo contenedor. En pantallas pequeñas los elementos se colocan uno debajo del otro.</p></details><p><a class="boton" href="ejemplo-bootstrap.html">Ver la versión con Bootstrap ↗</a></p></div></section>
+</main>
+<footer class="pie contenedor">Ruta Tica · Sitio ilustrativo para ISW-512. Fotografías de muestra: Unsplash. <a href="index.html#referencias">Consultar las fuentes</a>.</footer>
+</body>
+</html>

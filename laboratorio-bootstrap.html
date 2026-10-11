@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grid y utilidades · Laboratorio Bootstrap</title><link rel="stylesheet" href="assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="assets/css/laboratorio-bootstrap.css"></head>
+<body>
+<main class="lab">
+  <section aria-labelledby="gridTitulo"><div class="lab-title"><div><span class="lab-kicker">2.4 / Layout y Grid</span><h2 id="gridTitulo">Doce columnas, varias posibilidades.</h2></div><span class="lab-width" id="labAncho">Ancho del laboratorio</span></div>
+    <p>El container guarda el contenido, la row organiza la fila y las columnas indican cuánto espacio ocupa cada bloque. Probá distintas combinaciones.</p>
+    <div class="lab-controls"><label for="tipoContainer">Contenedor <select id="tipoContainer"><option value="container">container</option><option value="container-fluid">container-fluid</option></select></label><label for="combinacion">Columnas desde lg <select id="combinacion"><option value="4,4,4">4 + 4 + 4</option><option value="6,6">6 + 6</option><option value="8,4">8 + 4</option><option value="3,3,3,3">3 + 3 + 3 + 3</option><option value="12">12</option></select></label></div>
+    <div class="grid-area"><div id="gridContainer" class="container"><div class="row g-3" id="gridRow"></div></div></div>
+    <p class="lab-note">En móvil, cada bloque ocupa 12. Desde md, ocupa 6. Desde lg (992 px), aplica la combinación elegida. Las clases corresponden a Bootstrap 5.3.8.</p>
+    <details><summary>Ver el HTML que genera esta combinación</summary><pre><code id="gridCode"></code></pre></details>
+  </section>
+  <section class="utility-section" aria-labelledby="utilityTitulo"><span class="lab-kicker">2.5 / Clases utilitarias</span><h2 id="utilityTitulo">Una clase cambia una propiedad.</h2><p>Activá y desactivá las clases para ver lo que aporta cada una. Hay 24 ejemplos; las clases de display y alineación de texto se reemplazan entre sí para que el resultado sea claro.</p>
+    <div class="utility-layout"><div class="utility-options" id="utilityOptions"></div><div class="utility-result"><div class="sample-area"><div id="utilityExample"><span class="sample-chip">Playa</span><span class="sample-chip">Bosque</span><span class="sample-chip">Montaña</span></div><p id="hiddenMessage" hidden>El elemento está oculto porque activamos <code>d-none</code>.</p></div><p class="lab-note">Los tres elementos permiten observar el espacio, el orden y la alineación.</p><pre><code id="utilityCode"></code></pre><button class="btn btn-outline-success" type="button" id="resetUtility">Restablecer el ejemplo</button></div></div>
+  </section>
+</main>
+<script defer src="assets/js/laboratorio-bootstrap.js"></script>
+</body></html>

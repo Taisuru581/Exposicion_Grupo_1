@@ -1,0 +1,71 @@
+/* DEMO 1. Toda la maquetación de esta página está hecha con CSS propio. */
+/* border-box incluye el padding y el borde dentro del ancho del elemento. */
+* { box-sizing: border-box; }
+:root { --verde: #174f43; --tinta: #18352e; --papel: #f6f4ec; --acento: #e9c55b; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font: 1rem/1.65 system-ui, sans-serif; }
+a { color: inherit; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b58019; outline-offset: 5px; }
+/* Una imagen puede reducirse sin salir de su contenedor. */
+img { display: block; max-width: 100%; height: auto; }
+/* min() permite un ancho fluido y pone un límite para pantallas grandes. */
+.contenedor { width: min(1120px, 92%); margin-inline: auto; }
+.barra-demo { background: #132e27; color: white; padding: .65rem 4%; font-size: .8rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+.barra-demo a { text-underline-offset: .25rem; }
+.cabecera { padding-block: 1.4rem; }
+.navegacion { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.marca { font-size: 1.45rem; font-weight: 800; text-decoration: none; letter-spacing: -.06em; }
+.marca span { color: #737f35; }
+.enlaces { display: flex; flex-wrap: wrap; gap: 1.3rem; }
+.enlaces a { font-size: .9rem; text-decoration: none; }
+.enlaces a:hover { text-decoration: underline; }
+.etiqueta { font-size: .72rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
+/* Mobile-first: inicialmente la portada tiene una sola columna. */
+.portada { display: grid; grid-template-columns: 1fr; gap: 2rem; padding-block: 2rem 4rem; align-items: center; }
+/* clamp(mínimo, tamaño preferido, máximo) hace crecer el título con la pantalla. */
+h1 { font-size: clamp(2.4rem, 1.2rem + 5vw, 5rem); line-height: 1.04; letter-spacing: -.06em; font-weight: 750; margin: 1rem 0 1.4rem; }
+h2 { font-size: clamp(1.8rem, 1.2rem + 2vw, 2.9rem); line-height: 1.12; letter-spacing: -.045em; margin: .8rem 0 1rem; }
+h3 { line-height: 1.25; margin: .6rem 0; }
+p { max-width: 65ch; }
+.portada p { color: #5e7067; font-size: 1.05rem; }
+.boton { display: inline-block; background: var(--verde); color: white; border-radius: 100px; padding: .85rem 1.5rem; text-decoration: none; font-weight: 650; }
+.boton:hover { background: #0e3e33; }
+.foto-portada { position: relative; }
+.foto-portada img { width: 100%; aspect-ratio: 4 / 4.5; object-fit: cover; border-radius: 5rem .5rem .5rem .5rem; }
+.nota-foto { position: absolute; bottom: 1rem; left: 1rem; right: 1rem; padding: 1rem 1.3rem; background: #fffffff0; border-radius: .4rem; }
+.nota-foto strong { display: block; }
+.nota-foto span { font-size: .8rem; }
+.seccion { padding-block: 3.5rem; border-top: 1px solid #d7dfd5; }
+.introduccion { display: grid; gap: 1rem; margin-bottom: 2rem; }
+/* El grid tiene 12 columnas virtuales. Cada tarjeta ocupa 12 en móvil. */
+.destinos { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.5rem; }
+.destino { grid-column: span 12; min-width: 0; background: white; border: 1px solid #d7dfd5; border-radius: .6rem; overflow: hidden; }
+.destino img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.destino-contenido { padding: 1.3rem; }
+.destino p { color: #5e7067; font-size: .95rem; }
+.destino a { font-weight: 650; text-underline-offset: .25rem; }
+.consejos { display: grid; gap: 1.4rem; }
+.consejo { border-left: 2px solid var(--acento); padding-left: 1.2rem; }
+.contacto { background: #e7eddc; border-radius: .7rem; padding: clamp(1.4rem, 4vw, 3rem); }
+.contacto details { padding-block: 1rem; border-bottom: 1px solid #bdcbb9; }
+.contacto summary { font-weight: 650; cursor: pointer; }
+.pie { padding-block: 2rem; color: #64746a; font-size: .8rem; }
+.indicador { font-weight: 650; }
+.vista-tablet, .vista-desktop { display: none; }
+.salto { position: absolute; top: -100px; left: 1rem; padding: .7rem; background: white; z-index: 9; }
+.salto:focus { top: 1rem; }
+/* Este breakpoint responde al espacio que necesita nuestro contenido. */
+@media (min-width: 768px) {
+  .portada { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .destino { grid-column: span 6; } /* 6 + 6 = 12: dos tarjetas por fila. */
+  .introduccion { grid-template-columns: 1fr 1fr; align-items: end; }
+  .consejos { grid-template-columns: repeat(3, 1fr); }
+  .vista-movil { display: none; }
+  .vista-tablet { display: inline; }
+}
+@media (min-width: 1024px) {
+  .destino { grid-column: span 4; } /* 4 + 4 + 4 = 12: tres tarjetas por fila. */
+  .vista-tablet { display: none; }
+  .vista-desktop { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

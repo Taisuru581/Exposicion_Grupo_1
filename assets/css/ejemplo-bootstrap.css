@@ -1,0 +1,48 @@
+/* El layout usa el grid y las utilidades de Bootstrap; este CSS define la identidad visual. */
+:root { --ruta-verde: #174f43; --ruta-papel: #f6f4ec; }
+html { scroll-behavior: smooth; }
+body { background: var(--ruta-papel); color: #19382f; font-family: system-ui, sans-serif; }
+.demo-bar { display: flex; gap: .7rem; justify-content: space-between; flex-wrap: wrap; padding: .65rem 4%; background: #132e27; color: white; font-size: .78rem; }
+.demo-bar a { color: white; }
+.ruta-nav { padding-block: 1rem; background: var(--ruta-papel); border-bottom: 1px solid #d7dfd5; }
+.ruta-nav .navbar-brand { font-weight: 800; font-size: 1.45rem; letter-spacing: -.06em; }
+.ruta-nav .nav-link { color: #244e41; }
+.ruta-kicker { font-size: .72rem; font-weight: 750; text-transform: uppercase; letter-spacing: .15em; }
+.ruta-portada { padding-block: 3.5rem; }
+.ruta-portada h1 { font-size: clamp(2.6rem, 1.2rem + 4.7vw, 4.6rem); line-height: 1.04; letter-spacing: -.06em; font-weight: 750; }
+.ruta-portada p { color: #63776d; max-width: 50ch; }
+.ruta-carousel { margin-top: 2rem; }
+.ruta-carousel img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ruta-seccion { padding-block: 3.5rem; border-top: 1px solid #d7dfd5; }
+.ruta-seccion h2 { font-size: clamp(1.8rem, 1.2rem + 2vw, 2.7rem); letter-spacing: -.045em; line-height: 1.16; }
+.ruta-card { border: 1px solid #d7dfd5; border-radius: .6rem; overflow: hidden; background: white; height: 100%; display: flex; flex-direction: column; }
+.ruta-card > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ruta-card-body { padding: 1.2rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+.ruta-card h3 { margin: 0; font-size: 1.35rem; }
+.ruta-card p { font-size: .95rem; color: #63776d; }
+.ruta-card .btn { align-self: start; margin-top: auto; }
+.ruta-filter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-block: 1.5rem; }
+.ruta-tabs { margin-top: 1.4rem; }
+.ruta-tabs .tab-content { padding: 1.5rem; border: 1px solid #c6d3c2; background: white; border-radius: 0 0 .5rem .5rem; }
+.ruta-form { background: white; border: 1px solid #d7dfd5; border-radius: .7rem; padding: clamp(1.2rem, 4vw, 2.5rem); }
+.ruta-form .ruta-field { margin-bottom: 1.2rem; }
+.ruta-form .form-label { font-weight: 650; }
+.ruta-form :is(input,select,textarea) { max-width: 100%; }
+.ruta-ayuda { font-size: .8rem; color: #63776d; }
+.ruta-form .invalid-feedback { color: #9d2819; font-size: .85rem; }
+.ruta-form [aria-invalid="true"] { outline: 2px solid #a93324; outline-offset: 1px; }
+.ruta-form .ruta-field:has([aria-invalid="true"]) > .invalid-feedback { display: block; }
+.ruta-aside { border-left: 2px solid #e2bf52; padding-left: 1.2rem; }
+.ruta-pie { padding-block: 2rem; color: #63776d; font-size: .8rem; }
+.ruta-modal-image { width: 100%; max-height: 230px; object-fit: cover; border-radius: .4rem; }
+.ruta-form fieldset { border: 0; margin: 0; padding: 0; }
+.ruta-form legend { font-size: 1rem; font-weight: 650; }
+.ruta-form .inline-choice { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.salto { position: absolute; top: -100px; left: 1rem; padding: .7rem; background: white; z-index: 9; }
+.salto:focus { top: 1rem; }
+@media (min-width: 768px) { .ruta-carousel { margin-top: 0; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Los indicadores mantienen contraste sobre el fondo claro. */
+.ruta-carousel .carousel-indicators { margin: 0; gap: .3rem; }
+.ruta-carousel .carousel-indicators button { background-color: var(--ruta-verde); border: 0; height: 4px; width: 22px; margin: 0; }
