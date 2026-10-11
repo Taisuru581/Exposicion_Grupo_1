@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Sitio responsivo que demuestra el grid, seis componentes y formularios con Bootstrap 5.3.8.">
   <title>Ruta Tica · Ejemplo con Bootstrap</title>
-  <!-- Inclusión LOCAL: los archivos del framework se entregan dentro del proyecto. -->
+  <!-- Estilos de Bootstrap -->
   <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/ejemplo-bootstrap.css">
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
 <div class="demo-bar"><a href="index.html#laboratorio">← Volver al laboratorio</a><span>DEMO 02 · BOOTSTRAP 5.3.8</span></div>
-<!-- NAVBAR: Collapse muestra el menú móvil; navbar-expand-md lo expande desde 768 px. -->
+<!-- Menu principal -->
 <nav class="navbar navbar-expand-md ruta-nav" aria-label="Navegación principal">
   <div class="container">
     <a class="navbar-brand" href="#contenido">rutatica ↗</a>
@@ -23,11 +23,11 @@
   </div>
 </nav>
 <main id="contenido">
-  <!-- CONTAINER → ROW → COL: cada bloque ocupa 12 columnas en móvil y 6 desde md. -->
+  <!-- Portada en dos columnas -->
   <section class="container ruta-portada"><div class="row g-4 align-items-center">
     <div class="col-12 col-md-6"><span class="ruta-kicker">Un espacio para desconectarse</span><h1 class="mt-3 mb-3">Un paseo cambia el día.</h1><p>Una playa, un sendero o una montaña. Elegí el ambiente que más te guste y prepará un paseo a tu ritmo.</p><a href="#destinos" class="btn btn-success">Explorar los destinos ↗</a></div>
     <div class="col-12 col-md-6">
-      <!-- CAROUSEL: navegación manual para que el público controle cuándo cambia. -->
+      <!-- Carrusel de imagenes -->
       <div id="paisajes" class="carousel slide ruta-carousel" aria-label="Galería de paisajes">
         <div class="carousel-inner rounded-5">
           <div class="carousel-item active"><img src="assets/img/playa-800.jpg" class="img-fluid" width="800" height="533" alt="Costa y olas del mar"></div>
@@ -39,7 +39,7 @@
     </div>
   </div></section>
   <section class="container ruta-seccion" id="destinos"><span class="ruta-kicker">Elegí el ambiente</span><h2 class="mt-3">¿Qué te gustaría hacer?</h2>
-    <!-- El menú utiliza enlaces normales, sin filtros programados. -->
+    <!-- Menu de destinos -->
     <div class="dropdown my-3">
       <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ir a un ambiente</button>
       <ul class="dropdown-menu">
@@ -48,7 +48,7 @@
         <li><a class="dropdown-item" href="#montana">Montaña</a></li>
       </ul>
     </div>
-    <!-- Una columna en móvil, dos desde md y tres desde lg. -->
+    <!-- Tarjetas de destinos -->
     <div class="row g-4" id="catalogo">
       <div class="col-12 col-md-6 col-lg-4" id="playa">
         <article class="ruta-card">
@@ -78,14 +78,14 @@
         </article>
       </div>
     </div>
-    <!-- La paginación enlaza dos archivos HTML. -->
+    <!-- Paginacion -->
 <nav aria-label="Páginas de destinos" class="mt-4"><ul class="pagination justify-content-center">
 <li class="page-item active"><a class="page-link" href="ejemplo-bootstrap.html#destinos" aria-current="page">1</a></li>
 <li class="page-item"><a class="page-link" href="destinos-pagina-2.html#destinos">2</a></li>
 </ul></nav>
   </section>
   <section class="container ruta-seccion" id="preparacion"><span class="ruta-kicker">Antes de salir</span><h2 class="mt-3">Un paseo se disfruta más si vamos preparados.</h2>
-    <!-- TABS: los botones cambian de panel sin recargar toda la página. -->
+    <!-- Pestanas -->
     <div class="ruta-tabs"><div class="nav nav-tabs" role="tablist" aria-label="Consejos para el paseo">
       <button class="nav-link active" id="tabEquipo" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#panelEquipo" aria-controls="panelEquipo" aria-selected="true">Qué llevar</button>
       <button class="nav-link" id="tabPlan" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#panelPlan" aria-controls="panelPlan" aria-selected="false">Cómo organizarse</button>
@@ -93,7 +93,7 @@
     </div><div class="tab-content"><div class="tab-pane active show" id="panelEquipo" role="tabpanel" aria-labelledby="tabEquipo" tabindex="0"><h3 class="h5">Llevar lo necesario</h3><p class="mb-0">Agua, protección solar, calzado cómodo y una bolsa para los residuos. Si hay posibilidad de lluvia, conviene llevar una capa liviana.</p></div><div class="tab-pane" id="panelPlan" role="tabpanel" aria-labelledby="tabPlan" tabindex="0"><h3 class="h5">Dejar espacio para disfrutar</h3><p class="mb-0">Revisá la ruta y el clima, definí una hora de salida y evitá llenar el día de actividades. La idea es que el paseo también permita descansar.</p></div><div class="tab-pane" id="panelCuido" role="tabpanel" aria-labelledby="tabCuido" tabindex="0"><h3 class="h5">Dejar el lugar como lo encontramos</h3><p class="mb-0">Respetá los senderos, recogé tus residuos y observá los animales sin molestarlos. Son detalles pequeños que ayudan bastante.</p></div></div></div>
   </section>
   <section class="container ruta-seccion" id="solicitud"><div class="row g-4"><div class="col-12 col-lg-4"><span class="ruta-kicker">Planeá tu paseo</span><h2 class="mt-3">Empecemos por lo básico.</h2></div><div class="col-12 col-lg-8">
-    <!-- El navegador revisa required, minlength y type="email" sin código propio. -->
+    <!-- Formulario -->
     <form class="ruta-form" id="formPaseo" action="practica-completada.html" method="get">
       <div class="row g-4">
         <div class="col-12 col-md-6"><div class="ruta-field"><label class="form-label" for="nombre">Nombre <span aria-hidden="true">*</span></label><input class="form-control" id="nombre" type="text" autocomplete="name" minlength="2" maxlength="80" required aria-describedby="errorNombre"><div class="form-text" id="errorNombre">Escribí tu nombre, con al menos dos caracteres.</div></div></div>
@@ -109,7 +109,7 @@
     </form>
   </div></div></section>
 </main>
-<!-- Ventana de playa: el contenido está escrito en HTML. -->
+<!-- Detalle de la playa -->
 <div class="modal fade" id="detallePlaya" tabindex="-1" aria-labelledby="tituloPlaya" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
     <div class="modal-header"><h2 class="modal-title h4" id="tituloPlaya">Un día de playa</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
@@ -117,7 +117,7 @@
     <div class="modal-footer"><button class="btn btn-success" type="button" data-bs-dismiss="modal">Cerrar</button></div>
   </div></div>
 </div>
-<!-- Ventana de bosque: el contenido está escrito en HTML. -->
+<!-- Detalle del bosque -->
 <div class="modal fade" id="detalleBosque" tabindex="-1" aria-labelledby="tituloBosque" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
     <div class="modal-header"><h2 class="modal-title h4" id="tituloBosque">Una caminata en el bosque</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
@@ -125,7 +125,7 @@
     <div class="modal-footer"><button class="btn btn-success" type="button" data-bs-dismiss="modal">Cerrar</button></div>
   </div></div>
 </div>
-<!-- Ventana de montana: el contenido está escrito en HTML. -->
+<!-- Detalle de la montana -->
 <div class="modal fade" id="detalleMontana" tabindex="-1" aria-labelledby="tituloMontana" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
     <div class="modal-header"><h2 class="modal-title h4" id="tituloMontana">Una vista desde la montaña</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
@@ -135,7 +135,7 @@
 </div>
 <footer class="container ruta-pie">Ruta Tica · Sitio ilustrativo para ISW-512. <a href="index.html#referencias">Fuentes y créditos</a> · <a href="ejemplo-css.html">Comparar con HTML y CSS</a>.</footer>
 <noscript><p class="container">Activá JavaScript para utilizar los componentes y el formulario de este ejemplo.</p></noscript>
-<!-- El bundle clásico incluye Popper, necesario para colocar el dropdown. -->
+<!-- JavaScript de Bootstrap -->
 <script src="assets/vendor/bootstrap.bundle.min.js"></script>
 </body>
 </html>

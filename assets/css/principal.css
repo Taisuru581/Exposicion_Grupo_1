@@ -1,4 +1,4 @@
-/* Estilos del laboratorio educativo. Esta interfaz no necesita Bootstrap. */
+/* Estilos de la pagina principal */
 * { box-sizing: border-box; }
 :root { --papel:#f7f6ef; --verde:#1c5144; --tinta:#193c32; --suave:#65756c; --borde:#d8ded3; --amarillo:#f2cf66; --blanco:#fff; }
 html { scroll-behavior:smooth; scroll-padding-top:100px; }

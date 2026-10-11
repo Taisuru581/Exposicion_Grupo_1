@@ -1,4 +1,4 @@
-/* El layout usa el grid y las utilidades de Bootstrap; este CSS define la identidad visual. */
+/* Estilos del sitio */
 :root { --ruta-verde: #174f43; --ruta-papel: #f6f4ec; }
 html { scroll-behavior: smooth; }
 body { background: var(--ruta-papel); color: #19382f; font-family: system-ui, sans-serif; }
@@ -40,6 +40,6 @@ body { background: var(--ruta-papel); color: #19382f; font-family: system-ui, sa
 @media (min-width: 768px) { .ruta-carousel { margin-top: 0; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Los indicadores mantienen contraste sobre el fondo claro. */
+/* Color de los indicadores */
 .ruta-carousel .carousel-indicators { margin: 0; gap: .3rem; }
 .ruta-carousel .carousel-indicators button { background-color: var(--ruta-verde); border: 0; height: 4px; width: 22px; margin: 0; }
