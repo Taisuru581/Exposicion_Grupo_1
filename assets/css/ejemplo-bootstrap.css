@@ -29,9 +29,6 @@ body { background: var(--ruta-papel); color: #19382f; font-family: system-ui, sa
 .ruta-form .form-label { font-weight: 650; }
 .ruta-form :is(input,select,textarea) { max-width: 100%; }
 .ruta-ayuda { font-size: .8rem; color: #63776d; }
-.ruta-form .invalid-feedback { color: #9d2819; font-size: .85rem; }
-.ruta-form [aria-invalid="true"] { outline: 2px solid #a93324; outline-offset: 1px; }
-.ruta-form .ruta-field:has([aria-invalid="true"]) > .invalid-feedback { display: block; }
 .ruta-aside { border-left: 2px solid #e2bf52; padding-left: 1.2rem; }
 .ruta-pie { padding-block: 2rem; color: #63776d; font-size: .8rem; }
 .ruta-modal-image { width: 100%; max-height: 230px; object-fit: cover; border-radius: .4rem; }
